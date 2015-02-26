@@ -1028,7 +1028,7 @@ namespace Microsoft.Samples.Debugging.CorDebug
                 ref maxSupport, ref iid, out processIface, ref clrVersion, out flags);
 
             // This may be set regardless of success/failure
-            version = new Version(clrVersion.Major, clrVersion.Minor, clrVersion.Build, clrVersion.Revision);
+            version = new Version((ushort) clrVersion.Major, (ushort) clrVersion.Minor, (ushort) clrVersion.Build, (ushort) clrVersion.Revision);
 
             if (result < 0)
             {
